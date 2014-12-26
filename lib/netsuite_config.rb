@@ -1,5 +1,5 @@
-require "netsuite_config/version"
+require 'netsuite'
 
-module NetsuiteConfig
+module NetSuiteConfig
   # Your code goes here...
 end
