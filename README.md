@@ -7,20 +7,27 @@ TODO: Write a gem description
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'netsuite_config'
+gem install netsuite_config
 ```
 
-And then execute:
+Make sure you have these ENV in place
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install netsuite_config
+```bash
+NETSUITE_EMAIL=
+NETSUITE_PASSWORD=
+NETSUITE_ACCOUNT=
+NETSUITE_ROLE=
+NETSUITE_API=
+NETSUITE_PRODUCTION=
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+netsuite_config push
+netsuite_config pull
+netsuite_config diff
+```
 
 ## Contributing
 
