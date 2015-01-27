@@ -1,0 +1,9 @@
+export NETSUITE_EMAIL=
+export NETSUITE_PASSWORD=
+export NETSUITE_ACCOUNT=
+export NETSUITE_ROLE=3
+export NETSUITE_API=2014_1
+export NETSUITE_PRODUCTION=false
+
+# this is only needed if you are on the newer NS servers
+# export NETSUITE_WSDL="https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl"

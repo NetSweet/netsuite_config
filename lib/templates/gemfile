@@ -1,0 +1,4 @@
+source 'https://rubygems.org'
+
+gem 'netsuite', github: 'NetSweet/netsuite'
+gem 'netsuite_config', github: 'NetSweet/netsuite_config', branch: 'master'
