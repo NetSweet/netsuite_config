@@ -9,6 +9,24 @@ program :version, '0.0.1'
 program :description, 'Dumps configuration information in a NetSuite instance'
 default_command :pull
 
+command :init do |c|
+  c.syntax = 'netsuite_config pull [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    require 'fileutils'
+
+    FileUtils.cp File.expand_path('../../lib/templates/env', __FILE__), '.env'
+    FileUtils.mkdir_p 'bin'
+    FileUtils.cp File.expand_path('../../lib/templates/console', __FILE__), 'bin/console'
+    FileUtils.cp File.expand_path('../../lib/templates/netsuite_config.yml', __FILE__), 'netsuite_config.yml'
+    FileUtils.cp File.expand_path('../../lib/templates/ruby-version', __FILE__), '.ruby-version'
+    FileUtils.cp File.expand_path('../../lib/templates/gemfile', __FILE__), 'Gemfile'
+  end
+end
+
 command :pull do |c|
   c.syntax = 'netsuite_config pull [options]'
   c.summary = ''
