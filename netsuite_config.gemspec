@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'commander'
   s.add_dependency 'netsuite', '~> 0.3.0'
+  s.add_dependency 'dotenv'
 
   s.add_development_dependency "bundler", "~> 1.7"
   s.add_development_dependency "rake", "~> 10.0"
