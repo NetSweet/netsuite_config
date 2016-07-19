@@ -7,7 +7,7 @@ require 'commander/import'
 
 program :version, '0.0.1'
 program :description, 'Dumps configuration information in a NetSuite instance'
-default_command :pull
+default_command :help
 
 command :init do |c|
   c.syntax = 'netsuite_config pull [options]'
@@ -38,6 +38,21 @@ command :pull do |c|
   end
 end
 
+command :console do |c|
+  c.syntax = 'netsuite_config console [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  # c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    require 'netsuite_config/console'
+    require 'irb'
+    
+    ARGV.clear
+    IRB.start
+  end
+end
+
 command :push do |c|
   c.syntax = 'netsuite_config push [options]'
   c.summary = ''
@@ -59,4 +74,3 @@ command :diff do |c|
     # Do something or c.when_called Netsuite_config::Commands::Diff
   end
 end
-
