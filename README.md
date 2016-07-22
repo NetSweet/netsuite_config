@@ -1,6 +1,12 @@
-# NetsuiteConfig
+# NetSuite SuiteScript and Configuration Versioning and Management
 
-TODO: Write a gem description
+NOTE: very beta, horrible documentation.
+
+Functionality:
+
+* Easily pull SuiteScripts active in a NetSuite instance for easy versioning and updates
+* Interactive SuiteTalk console
+* Determine which features are active on a NetSuite account, and provide a history of configuration updates
 
 ## Installation
 
@@ -24,9 +30,21 @@ NETSUITE_PRODUCTION=
 ## Usage
 
 ```bash
-netsuite_config push
+netsuite_config console
 netsuite_config pull
+
+# not yet implemented...
+netsuite_config push
 netsuite_config diff
+```
+
+## Testing
+
+```sh
+export PATH="$HOME/Projects/netsuite_config/bin:$PATH"
+export GEM_HOME=$HOME/Projects/netsuite_config/vendor/bundle/gems:$GEM_HOME
+export GEM_PATH="$HOME/Projects/netsuite_config/vendor/bundle:$GEM_PATH"
+export RUBYLIB="$HOME/Projects/netsuite_config/lib:$RUBYLIB"
 ```
 
 ## Contributing
