@@ -1,0 +1,10 @@
+## How to use this repository
+
+All SuiteScripts deployed to NetSuite live in this repository.
+
+To update this repository with the latest scripts from NetSuite:
+
+```sh
+netsuite_config pull
+```
+Any changes made to SuiteScripts, should first be made here, and then manually copied to netsuite.
