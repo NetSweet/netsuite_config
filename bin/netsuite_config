@@ -18,6 +18,8 @@ command :init do |c|
   c.action do |args, options|
     require 'fileutils'
 
+    FileUtils.mkdir_p 'scripts'
+    
     FileUtils.mkdir_p 'bin'
     FileUtils.cp File.expand_path('../../lib/templates/console', __FILE__), 'bin/console'
 
