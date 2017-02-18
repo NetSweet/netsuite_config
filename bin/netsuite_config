@@ -29,6 +29,17 @@ command :init do |c|
     FileUtils.cp File.expand_path('../../lib/templates/gemfile', __FILE__), 'Gemfile'
     FileUtils.cp File.expand_path('../../lib/templates/gitignore', __FILE__), '.gitignore'
 
+    netsuite_email = ask("Email:")
+    netsuite_password = ask("Password:")
+
+    account = NetSuite::Rest::Utilities::Roles.get(
+      email:netsuite_email,
+      password: netsuite_password
+    )
+
+    puts "NetSuite Account ID: #{account.first[:account_id]}"
+    puts "Webservices: #{account.first[:wsdls][:webservices].first}"
+
     `open .env`
   end
 end
