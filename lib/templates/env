@@ -6,4 +6,4 @@ export NETSUITE_API=2015_1
 export NETSUITE_PRODUCTION=false
 
 # this is only needed if you are on the newer NS servers
-# export NETSUITE_WSDL="https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl"
+# export NETSUITE_WSDL="https://webservices.na1.netsuite.com/wsdl/v2015_1_0/netsuite.wsdl"
