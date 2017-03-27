@@ -8,12 +8,11 @@ Functionality:
 * Interactive SuiteTalk console
 * Determine which features are active on a NetSuite account, and provide a history of configuration updates
 
-## Installation
-
-Add this line to your application's Gemfile:
+## Quickstart
 
 ```ruby
 gem install netsuite_config
+netsuite_config init
 ```
 
 Make sure you have these ENV in place
